@@ -29,3 +29,5 @@ class UserException:
             print("User not found. Invalid ID.")
         except Exception as e:
             print(f"Unexpected error: {e}")
+obj6=UserException()
+obj6.RaiseException()

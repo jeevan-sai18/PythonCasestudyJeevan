@@ -27,3 +27,5 @@ class ArtworkException:
             print("Artwork not found. Invalid ID.")
         except Exception as e:
             print(f"Unexpected error: {e}")
+obj5=ArtworkException()
+obj5.RaiseException()

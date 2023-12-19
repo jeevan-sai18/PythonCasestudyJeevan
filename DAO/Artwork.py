@@ -59,9 +59,5 @@ class Artwork(DbConnection):
         print('Records Deleted Successfully..')
         return True
 
-obj2=Artwork()
-#obj2.setter()
-obj2.getter()
-#obj2.update()
-#obj2.delete()
+
 

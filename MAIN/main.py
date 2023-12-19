@@ -1,50 +1,55 @@
-# I can insert all values through main function by creating object for ENTITY
+from DAO.Artist import Artist
+from DAO.Artwork import Artwork
+from DAO.User import User
+from DAO.Galllery import Gallery
 
-# Now I retrieve Variables and values
+def main_art_entities():
+    while True:
+        print("Select an option:")
+        print("1.Artist")
+        print("2.Artwork")
+        print("3.User")
+        print("4.Gallery")
+        print("5.Exit")
 
-from DAO.Artist import *
-obj1=Artist()
-obj1.getter()
-#obj1.setter()
-#obj1.update()
-#obj1.delete()
-print("............................")
+        choice=input("Enter your choice: ")
 
-from DAO.Artwork import *
-obj2=Artwork()
-obj2.getter()
-#obj2.setter()
-#obj2.update()
-#obj2.delete()
+        if choice == '1':
+            obj=Artist()
+        elif choice == '2':
+            obj=Artwork()
+        elif choice == '3':
+            obj=User()
+        elif choice == '4':
+            obj=Gallery()
+        elif choice == '5':
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option.")
+            continue
 
-print(".................................")
+        obj.getter()
+        print("............................")
+        operation_choice=input("Do you want to perform additional operations? (Y/N): ").upper()
+        if operation_choice!='Y':
+            break
 
-from DAO.User import *
-obj3=User()
-obj3.getter()
-#obj3.setter()
-#obj3.update()
-#obj3.delete()
+        print("Select an operation:")
+        print("1.Setter")
+        print("2.Update")
+        print("3.Delete")
+        operation=input("Enter your operation choice: ")
 
-print(".....................................")
+        if operation == '1':
+            obj.setter()
+        elif operation == '2':
+            obj.update()
+        elif operation == '3':
+            obj.delete()
+        else:
+            print("Invalid operation choice. Returning to the main menu.")
 
-from DAO.Galllery import *
+if __name__ == "__main__":
+    main_art_entities()
 
-obj4=Gallery()
-obj4.getter()
-#obj4.setter()
-#obj4.update()
-#obj4.delete()
-
-print(".......................")
-
-from EXCEPTION.ArtWorkNotFoundException import *
-
-obj5=ArtworkException()
-obj5.RaiseException()
-print(".........................")
-
-from EXCEPTION.UserNotFoundException import *
-
-obj6=UserException()
-obj6.RaiseException()

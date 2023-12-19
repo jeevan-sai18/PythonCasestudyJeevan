@@ -62,8 +62,3 @@ class Gallery(DbConnection):
         self.conn.commit()
         print('Records Deleted Successfully..')
         return True
-obj4=Gallery()
-#obj4.setter()
-obj4.getter()
-#obj4.update()
-#obj4.delete()

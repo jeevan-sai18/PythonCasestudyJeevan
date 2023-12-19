@@ -46,7 +46,7 @@ class User(DbConnection):
         self.DateOfBirth=input('Enter DateOfBirth:')
         self.ProfilePicture=input('Enter Profilepicture')
 
-        update_str='update user set Username=%s,Password=%s,Email=%s,FirstName=%s,LastName=%s,DateOfBirth=%s,ProfilePicture=%s where ArtworkID=%s'
+        update_str='update user set Username=%s,Password=%s,Email=%s,FirstName=%s,LastName=%s,DateOfBirth=%s,ProfilePicture=%s where UserID=%s'
         self.open()
         data=[(self.Username,self.Password,self.Email,self.FirstName,self.LastName,self.DateOfBirth,self.ProfilePicture,Id)]
         self.s.executemany(update_str,data)
@@ -62,10 +62,3 @@ class User(DbConnection):
             self.conn.commit()
             print('Records Deleted Successfully..')
 
-obj3=User()
-
-
-#obj3.setter()
-#obj3.getter()
-#obj3.update()
-#obj3.delete()

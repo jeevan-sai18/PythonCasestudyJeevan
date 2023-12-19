@@ -56,9 +56,3 @@ class Artist(DbConnection):
         self.conn.commit()
         print('Records Deleted Successfully..')
 
-obj1=Artist()
-
-obj1.getter()
-#obj1.setter()
-#obj1.update()
-#obj1.delete()
