@@ -54,11 +54,11 @@ class User(DbConnection):
         print(update_str,data)
         print('Records updated Successfully..')
 
-        def delete(self):
-            Id=int(input('Enter the UserId to be deleted:'))
-            delete_str=f'delete from user where UserId={Id}'
-            self.open()
-            self.s.execute(delete_str)
-            self.conn.commit()
-            print('Records Deleted Successfully..')
+    def delete(self):
+        Id=int(input('Enter the UserId to be deleted:'))
+        delete_str=f'delete from User where UserId={Id}'
+        self.open()
+        self.s.execute(delete_str)
+        self.conn.commit()
+        print('Records Deleted Successfully..')
 
