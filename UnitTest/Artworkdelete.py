@@ -1,7 +1,7 @@
 import unittest
 from DAO.Artwork import Artwork
 
-class TestGalleryDAO(unittest.TestCase):
+class TestArtworkDAODelete(unittest.TestCase):
     def setUp(self):
         self.gallery_dao=Artwork()
 

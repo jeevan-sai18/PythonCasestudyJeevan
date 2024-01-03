@@ -1,7 +1,7 @@
 import unittest
 from DAO.Galllery import Gallery
 
-class TestGalleryDAO(unittest.TestCase):
+class TestGalleryDAOUpdate(unittest.TestCase):
     def setUp(self):
         self.gallery_dao=Gallery()
 
